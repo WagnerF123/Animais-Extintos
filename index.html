@@ -1,90 +1,438 @@
-<!Doctype html>
-<html>
-    <body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-       EDUCAÇÃO AMBIENTAL
-    </title>
-    <p>ANIMAIS QUASE EXTINTOS</p>
-    <h1>A educação ambiental é um processo contínuo que visa conscientizar as pessoas sobre a importância da preservação do meio ambiente e promover mudanças de atitudes em relação aos recursos naturais. Ela não se limita apenas ao ensino de conceitos ecológicos, mas também busca criar uma visão crítica e reflexiva sobre as interações humanas com o ambiente. Por meio de práticas educativas, pretende-se incentivar o respeito à natureza e o uso sustentável dos recursos, garantindo que as futuras gerações possam desfrutar de um planeta saudável.
 
-    </h1>
-     <div class="cagar">
+    <title>Animais Extintos | Histórias que ficaram</title>
 
-     
-    <img src="https://static.escolakids.uol.com.br/2020/09/lobo-guara.jpg"/>
-    <div class="cagar1">
-    <h1>LOBO GUARÁ </h1>
+    <meta name="description"
+        content="Conheça animais que um dia caminharam, voaram e nadaram pela Terra. Uma viagem pela história da vida no nosso planeta.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <a href="#inicio" class="logo">
+            <span>🐾</span>
+            <strong>Animais Extintos</strong>
+        </a>
+
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#animais">Animais</a>
+            <a href="#historias">Histórias</a>
+            <a href="#aprendizado">O que aprendemos</a>
+        </nav>
+
+        <button class="menu-mobile" onclick="abrirMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-conteudo">
+
+            <span class="tag">🌎 Uma viagem pela história da Terra</span>
+
+            <h1>
+                Eles já estiveram aqui.
+                <span>Hoje, vivem na nossa memória.</span>
+            </h1>
+
+            <p>
+                Muito antes de nós, criaturas incríveis dominavam florestas,
+                oceanos e continentes. Algumas desapareceram há milhões de anos.
+                Outras partiram há pouco tempo.
+            </p>
+
+            <div class="hero-botoes">
+                <a href="#animais" class="btn principal">
+                    Conhecer os animais →
+                </a>
+
+                <a href="#historias" class="btn secundario">
+                    Descobrir histórias
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-frase">
+            <span>“</span>
+            Cada espécie desaparecida deixa uma história para contar.
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUÇÃO -->
+    <section class="introducao">
+
+        <div class="introducao-texto">
+
+            <span class="mini-titulo">POR QUE OLHAR PARA O PASSADO?</span>
+
+            <h2>
+                Extinção não é apenas uma palavra.
+                <span>São histórias que deixaram de acontecer.</span>
+            </h2>
+
+            <p>
+                Quando pensamos em animais extintos, é fácil lembrar apenas de
+                dinossauros. Mas a verdade é muito maior. Mamutes, dodôs,
+                tigres-dentes-de-sabre e muitos outros animais fizeram parte
+                da vida na Terra.
+            </p>
+
+            <p>
+                Conhecer essas espécies ajuda a entender como o nosso planeta
+                mudou — e também nos faz pensar sobre os animais que ainda
+                podemos proteger hoje.
+            </p>
+
+        </div>
+
+        <div class="numero-destaque">
+
+            <strong>8+</strong>
+
+            <span>
+                milhões de espécies podem existir
+                atualmente no planeta.
+            </span>
+
+            <small>
+                A biodiversidade da Terra ainda guarda
+                muitos mistérios.
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANIMAIS -->
+    <section class="animais" id="animais">
+
+        <div class="titulo-secao">
+
+            <div>
+                <span class="mini-titulo">ALGUMAS HISTÓRIAS</span>
+
+                <h2>
+                    Quem já caminhou por aqui?
+                </h2>
+            </div>
+
+            <p>
+                Conheça alguns dos animais que despertam nossa curiosidade
+                até hoje.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- MAMUTE -->
+            <article class="card">
+
+                <div class="card-imagem mamute">
+                    <span>🦣</span>
+                    <div class="data">Extinto há milhares de anos</div>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">ERA DO GELO</span>
+
+                    <h3>Mamute-lanoso</h3>
+
+                    <p>
+                        Imagine caminhar por uma paisagem congelada e,
+                        ao longe, encontrar um enorme mamute coberto de pelos.
+                        Eles realmente viveram assim.
+                    </p>
+
+                    <button onclick="mostrarCuriosidade('mamute')">
+                        Ver curiosidade →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- DODO -->
+            <article class="card">
+
+                <div class="card-imagem dodo">
+                    <span>🦤</span>
+                    <div class="data">Extinto no século XVII</div>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">ILHA MAURÍCIO</span>
+
+                    <h3>Dodô</h3>
+
+                    <p>
+                        O dodô não era um animal assustador ou gigante.
+                        Era uma ave tranquila que vivia em uma ilha.
+                        Sua história, porém, terminou de forma triste.
+                    </p>
+
+                    <button onclick="mostrarCuriosidade('dodo')">
+                        Ver curiosidade →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- SMILODON -->
+            <article class="card">
+
+                <div class="card-imagem smilodon">
+                    <span>🐯</span>
+                    <div class="data">Extinto há milhares de anos</div>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">PREDADOR</span>
+
+                    <h3>Smilodon</h3>
+
+                    <p>
+                        Conhecido popularmente como tigre-dentes-de-sabre,
+                        esse predador possuía enormes caninos e viveu
+                        em diferentes regiões das Américas.
+                    </p>
+
+                    <button onclick="mostrarCuriosidade('smilodon')">
+                        Ver curiosidade →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOSASSAURO -->
+            <article class="card">
+
+                <div class="card-imagem mosassauro">
+                    <span>🌊</span>
+                    <div class="data">Extinto há cerca de 66 milhões de anos</div>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">OCEANO</span>
+
+                    <h3>Mosassauro</h3>
+
+                    <p>
+                        Enquanto os dinossauros dominavam a terra,
+                        grandes predadores também comandavam os mares.
+                        O mosassauro era um deles.
+                    </p>
+
+                    <button onclick="mostrarCuriosidade('mosassauro')">
+                        Ver curiosidade →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTÓRIAS -->
+    <section class="historias" id="historias">
+
+        <div class="historias-conteudo">
+
+            <span class="mini-titulo">MAIS DO QUE CURIOSIDADE</span>
+
+            <h2>
+                Por trás de cada espécie,
+                <span>existe uma história.</span>
+            </h2>
+
+            <p>
+                Algumas extinções aconteceram por mudanças naturais no planeta.
+                Outras tiveram relação com atividades humanas, como caça,
+                destruição de habitats e introdução de espécies em ambientes
+                onde elas não existiam.
+            </p>
+
+            <p>
+                É por isso que estudar o passado importa. A história desses
+                animais pode nos ajudar a enxergar melhor o presente.
+            </p>
+
+            <a href="#aprendizado" class="btn principal">
+                Continuar lendo ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- APRENDIZADO -->
+    <section class="aprendizado" id="aprendizado">
+
+        <div class="titulo-secao centralizado">
+
+            <span class="mini-titulo">O QUE FICA DEPOIS?</span>
+
+            <h2>
+                O passado pode ensinar bastante.
+            </h2>
+
+            <p>
+                A extinção faz parte da história natural, mas algumas perdas
+                também estão relacionadas às nossas escolhas.
+            </p>
+
+        </div>
+
+
+        <div class="aprendizado-grid">
+
+            <div class="aprendizado-card">
+
+                <div class="icone">🌱</div>
+
+                <h3>Proteger habitats</h3>
+
+                <p>
+                    Florestas, oceanos, rios e outros ambientes são a casa
+                    de milhares de espécies.
+                </p>
+
+            </div>
+
+
+            <div class="aprendizado-card">
+
+                <div class="icone">🔎</div>
+
+                <h3>Conhecer para cuidar</h3>
+
+                <p>
+                    Quanto mais entendemos uma espécie, melhor conseguimos
+                    perceber os riscos que ela enfrenta.
+                </p>
+
+            </div>
+
+
+            <div class="aprendizado-card">
+
+                <div class="icone">❤️</div>
+
+                <h3>Valorizar a vida</h3>
+
+                <p>
+                    Cada animal tem um papel no equilíbrio do ambiente
+                    em que vive.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FRASE FINAL -->
+    <section class="frase-final">
+
+        <div>
+
+            <span>🐾</span>
+
+            <h2>
+                Alguns animais desapareceram.
+                <br>
+                Suas histórias, não.
+            </h2>
+
+            <p>
+                Que conhecer o passado também nos ajude
+                a cuidar melhor do futuro.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <div class="footer-logo">
+            🐾 Animais Extintos
+        </div>
+
+        <p>
+            Feito com curiosidade, respeito pela natureza
+            e vontade de aprender.
+        </p>
+
+        <span>
+            © 2026 Animais Extintos
+        </span>
+
+    </footer>
+
+
+    <!-- JANELA DE CURIOSIDADE -->
+    <div id="modal" class="modal">
+
+        <div class="modal-conteudo">
+
+            <button class="fechar" onclick="fecharModal()">
+                ×
+            </button>
+
+            <span id="modal-icone" class="modal-icone">🐾</span>
+
+            <h2 id="modal-titulo">
+                Curiosidade
+            </h2>
+
+            <p id="modal-texto">
+                Informação sobre o animal.
+            </p>
+
+        </div>
+
     </div>
-    <h2>O lobo-guará (Chrysocyon brachyurus) é um dos mamíferos mais emblemáticos do Brasil, conhecido por sua aparência única e pela sua importância ecológica. Ele é o maior canídeo da América do Sul e possui uma pelagem avermelhada, com longas pernas e uma cauda fofa. Seu corpo esguio e suas orelhas grandes e pontudas contribuem para sua característica aparência. Apesar do nome "lobo", o lobo-guará não é, na verdade, um lobo, mas pertence à família Canidae, assim como os cães e as raposas.</h2>
-    <img src="https://s3.amazonaws.com/media.wikiaves.com.br/images/4345/5434515_eb265852e52787202c100441ba364135.jpg">
-    <div class="cagar1">
-    <h1>ARARA AZUL</h1>
-    </div>
-    <h2>A arara-azul é uma das aves mais icônicas e impressionantes do Brasil, especialmente famosa por sua cor vibrante e comportamento social. Ela é conhecida por sua plumagem azul intensa, com toques de amarelo e verde. Existem duas espécies principais de araras-azuis: a Arara-azul-grande (Anodorhynchus hyacinthinus) e a Arara-azul-de-lear (Anodorhynchus leari).
-
-        A arara-azul-grande é uma das maiores espécies de papagaio, com uma envergadura de asas que pode chegar a 1,5 metros. Elas são encontradas principalmente no centro-oeste do Brasil, principalmente no Pantanal, mas também em áreas do Mato Grosso do Sul e Mato Grosso. São famosas pela sua inteligência e habilidade de imitar sons, incluindo palavras humanas.</h2>
-   <img src="https://www.sereducacional.com/storage/app/uploads/unama.jpg">
-   <div class="cagar1">
-
-   <h1>PEIXE BOI</h1>
-   </div>
-   <h2>O peixe-boi é um mamífero aquático, pertencente à ordem Sirenia, e é conhecido por sua natureza tranquila e herbívora. Ele tem um corpo grande e arredondado, com uma cauda adaptada para nadar. No Brasil, a espécie mais conhecida é o peixe-boi amazônico (Trichechus inunguis), encontrado principalmente na região Norte, mas há também o peixe-boi marinho, que habita as águas costeiras do Nordeste e outras regiões tropicais.
-
-    Esses animais são bastante emblemáticos, pois possuem um comportamento pacífico e são vulneráveis à extinção devido à perda de habitat e à caça ilegal. Eles se alimentam principalmente de plantas aquáticas e, apesar de seu tamanho, são bastante ágeis na água.</h2>
-   
-   
-   <style>
 
 
-        p{
-            text-align: center;
-            font-size: 200%;
-            margin: auto;
-            padding: 1%;
-            background-color: rgb(41, 243, 0);
-            color: rgb(40, 150, 29);
-        }
-        body{
-            background-color: rgb(0, 0, 0)
-        }
-        img{
-            margin: 1%;
-            height: 30%;
-            width: 50%;
-            border-radius: 10px;
-            border: 10px rgb(255, 255, 255) solid;
-        
-        }
-        .cagar{
-            text-align: center
-        }
-        h1{
-            text-align: center;
-            color: aliceblue;
-        }
-        h2{
-            text-align: center;
-            color: aliceblue;
-        }
-        h3{
-            text-align: center;
-            color: aliceblue;
-        }
-        .cagar1{
-            text-decoration: underline white solid;
-        
-        }
+    <script src="script.js"></script>
 
-    
+</body>
 
-        
-    </style>
-    
-
-
-        
-    </body>
-    
 </html>
