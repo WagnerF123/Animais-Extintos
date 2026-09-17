@@ -1,3 +1,7 @@
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +14,11 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     color: #183b3d;
+
     background: #f8f5ed;
+
     line-height: 1.6;
 }
 
@@ -25,19 +32,23 @@ button {
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* =====================================
+   MENU
+===================================== */
 
 .header {
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 80px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 7%;
@@ -49,7 +60,9 @@ button {
 
 .logo {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     font-size: 20px;
@@ -61,39 +74,44 @@ button {
 
 .menu {
     display: flex;
+
     gap: 35px;
 }
 
 .menu a {
     font-size: 14px;
+
     font-weight: bold;
 
-    opacity: .85;
+    opacity: .9;
 
     transition: .3s;
 }
 
 .menu a:hover {
+    color: #ffd083;
+
     opacity: 1;
-    color: #ffd080;
 }
 
 .menu-mobile {
     display: none;
 
     border: none;
+
     background: transparent;
 
     color: white;
+
     font-size: 28px;
 
     cursor: pointer;
 }
 
 
-/* =========================
+/* =====================================
    HERO
-========================= */
+===================================== */
 
 .hero {
     min-height: 720px;
@@ -101,6 +119,7 @@ button {
     position: relative;
 
     display: flex;
+
     align-items: center;
 
     padding: 120px 9% 80px;
@@ -114,12 +133,14 @@ button {
             90deg,
             rgba(4, 32, 34, .97) 0%,
             rgba(4, 32, 34, .88) 38%,
-            rgba(4, 32, 34, .25) 75%,
-            rgba(4, 32, 34, .4) 100%
+            rgba(4, 32, 34, .35) 75%,
+            rgba(4, 32, 34, .45) 100%
         ),
+
         url("https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1800&q=85");
 
     background-size: cover;
+
     background-position: center;
 }
 
@@ -165,10 +186,16 @@ button {
 
 .hero-botoes {
     display: flex;
+
     gap: 15px;
 
     flex-wrap: wrap;
 }
+
+
+/* =====================================
+   BOTÕES
+===================================== */
 
 .btn {
     display: inline-flex;
@@ -184,11 +211,13 @@ button {
 
 .btn.principal {
     background: #f4ad61;
+
     color: #183b3d;
 }
 
 .btn.principal:hover {
     transform: translateY(-3px);
+
     background: #ffc37c;
 }
 
@@ -200,18 +229,26 @@ button {
 
 .btn.secundario:hover {
     background: white;
+
     color: #183b3d;
 }
+
+
+/* =====================================
+   FRASE DO HERO
+===================================== */
 
 .hero-frase {
     position: absolute;
 
     right: 8%;
+
     bottom: 100px;
 
     max-width: 240px;
 
     font-size: 17px;
+
     font-style: italic;
 
     color: #fff;
@@ -220,24 +257,25 @@ button {
 }
 
 .hero-frase span {
-    font-size: 70px;
-
     display: block;
 
     color: #f4ad61;
+
+    font-size: 70px;
 
     height: 45px;
 }
 
 
-/* =========================
+/* =====================================
    INTRODUÇÃO
-========================= */
+===================================== */
 
 .introducao {
     padding: 110px 9%;
 
     display: grid;
+
     grid-template-columns: 1.5fr .7fr;
 
     gap: 100px;
@@ -319,9 +357,9 @@ button {
 }
 
 
-/* =========================
-   ANIMAIS
-========================= */
+/* =====================================
+   SEÇÃO DOS ANIMAIS
+===================================== */
 
 .animais {
     padding: 100px 7%;
@@ -333,6 +371,7 @@ button {
     display: flex;
 
     align-items: end;
+
     justify-content: space-between;
 
     gap: 40px;
@@ -356,6 +395,11 @@ button {
     color: #6a7777;
 }
 
+
+/* =====================================
+   CARDS
+===================================== */
+
 .cards {
     display: grid;
 
@@ -371,7 +415,8 @@ button {
 
     overflow: hidden;
 
-    box-shadow: 0 15px 40px rgba(24, 59, 61, .08);
+    box-shadow:
+        0 15px 40px rgba(24, 59, 61, .08);
 
     transition: .35s;
 }
@@ -379,70 +424,93 @@ button {
 .card:hover {
     transform: translateY(-8px);
 
-    box-shadow: 0 25px 50px rgba(24, 59, 61, .14);
+    box-shadow:
+        0 25px 50px rgba(24, 59, 61, .15);
 }
 
+
+/* =====================================
+   IMAGENS
+===================================== */
+
 .card-imagem {
-    height: 230px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    height: 250px;
 
     position: relative;
 
     overflow: hidden;
+
+    background: #dfe7df;
 }
 
-.card-imagem span {
-    font-size: 100px;
+.card-imagem img {
+    width: 100%;
 
-    filter: drop-shadow(0 15px 10px rgba(0,0,0,.15));
+    height: 100%;
 
-    transition: .4s;
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .5s ease;
 }
 
-.card:hover .card-imagem span {
-    transform: scale(1.12);
+.card:hover .card-imagem img {
+    transform: scale(1.08);
 }
 
-.mamute {
+
+/* camada escura na parte inferior */
+
+.card-imagem::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
     background:
-        linear-gradient(135deg, #536e71, #d2a16c);
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.30),
+            transparent 50%
+        );
+
+    pointer-events: none;
 }
 
-.dodo {
-    background:
-        linear-gradient(135deg, #81977c, #d9b777);
-}
 
-.smilodon {
-    background:
-        linear-gradient(135deg, #74513d, #d59c59);
-}
-
-.mosassauro {
-    background:
-        linear-gradient(135deg, #155b6b, #52a9b7);
-}
+/* etiqueta */
 
 .data {
     position: absolute;
 
     left: 15px;
+
     bottom: 15px;
 
-    background: rgba(255,255,255,.9);
+    z-index: 2;
 
-    padding: 6px 10px;
+    background: rgba(255,255,255,.94);
+
+    color: #183b3d;
+
+    padding: 7px 12px;
 
     border-radius: 20px;
 
     font-size: 10px;
 
     font-weight: bold;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.15);
 }
+
+
+/* =====================================
+   CONTEÚDO DOS CARDS
+===================================== */
 
 .card-conteudo {
     padding: 25px;
@@ -486,12 +554,18 @@ button {
     padding: 10px 0;
 
     font-size: 14px;
+
+    transition: .2s;
+}
+
+.card button:hover {
+    transform: translateX(5px);
 }
 
 
-/* =========================
+/* =====================================
    HISTÓRIAS
-========================= */
+===================================== */
 
 .historias {
     min-height: 600px;
@@ -499,6 +573,7 @@ button {
     padding: 100px 9%;
 
     display: flex;
+
     align-items: center;
 
     color: white;
@@ -506,13 +581,15 @@ button {
     background:
         linear-gradient(
             90deg,
-            rgba(8, 43, 43, .97),
-            rgba(8, 43, 43, .75),
-            rgba(8, 43, 43, .4)
+            rgba(8,43,43,.97),
+            rgba(8,43,43,.75),
+            rgba(8,43,43,.40)
         ),
+
         url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85");
 
     background-size: cover;
+
     background-position: center;
 }
 
@@ -541,9 +618,9 @@ button {
 }
 
 
-/* =========================
+/* =====================================
    APRENDIZADO
-========================= */
+===================================== */
 
 .aprendizado {
     padding: 110px 8%;
@@ -556,11 +633,16 @@ button {
 
     max-width: 750px;
 
-    margin: auto auto 60px;
+    margin:
+        auto
+        auto
+        60px;
 }
 
 .centralizado p {
     margin: 20px auto 0;
+
+    color: #657575;
 }
 
 .aprendizado-grid {
@@ -602,9 +684,9 @@ button {
 }
 
 
-/* =========================
+/* =====================================
    FRASE FINAL
-========================= */
+===================================== */
 
 .frase-final {
     padding: 110px 20px;
@@ -635,9 +717,9 @@ button {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* =====================================
+   RODAPÉ
+===================================== */
 
 footer {
     padding: 45px 8%;
@@ -676,22 +758,23 @@ footer > span {
 }
 
 
-/* =========================
+/* =====================================
    MODAL
-========================= */
+===================================== */
 
 .modal {
     position: fixed;
 
     inset: 0;
 
-    background: rgba(4, 25, 26, .75);
+    background: rgba(4,25,26,.75);
 
     backdrop-filter: blur(8px);
 
     display: none;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 20px;
@@ -725,11 +808,13 @@ footer > span {
 
     from {
         opacity: 0;
+
         transform: translateY(20px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 
@@ -739,6 +824,7 @@ footer > span {
     position: absolute;
 
     top: 15px;
+
     right: 20px;
 
     border: none;
@@ -769,9 +855,9 @@ footer > span {
 }
 
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* =====================================
+   TABLET
+===================================== */
 
 @media (max-width: 1000px) {
 
@@ -796,6 +882,10 @@ footer > span {
 }
 
 
+/* =====================================
+   CELULAR
+===================================== */
+
 @media (max-width: 700px) {
 
     .header {
@@ -808,7 +898,9 @@ footer > span {
         position: absolute;
 
         top: 70px;
+
         left: 5%;
+
         right: 5%;
 
         padding: 20px;
@@ -860,6 +952,10 @@ footer > span {
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    .card-imagem {
+        height: 240px;
     }
 
     .card p {

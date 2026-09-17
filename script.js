@@ -1,6 +1,6 @@
-/* =========================
+/* =====================================
    MENU MOBILE
-========================= */
+===================================== */
 
 function abrirMenu() {
 
@@ -11,42 +11,73 @@ function abrirMenu() {
 }
 
 
-/* =========================
+/* =====================================
    CURIOSIDADES
-========================= */
+===================================== */
 
 const curiosidades = {
 
     mamute: {
+
         titulo: "Mamute-lanoso",
-        icone: "🦣",
+
+        icone: "🐂",
+
         texto:
-            "O mamute-lanoso era muito parecido com os elefantes atuais, mas possuía uma grossa camada de pelos para suportar o frio. Alguns grupos sobreviveram muito tempo depois do fim da última Era do Gelo."
+            "O mamute-lanoso era parente dos elefantes atuais. " +
+            "Seu corpo era coberto por uma camada de pelos que ajudava " +
+            "a enfrentar o frio. Ele viveu em regiões frias do hemisfério " +
+            "norte durante a Era do Gelo."
     },
+
 
     dodo: {
+
         titulo: "Dodô",
-        icone: "🦤",
+
+        icone: "🐔",
+
         texto:
-            "O dodô vivia na ilha Maurício, no oceano Índico. Como evoluiu em um ambiente sem grandes predadores terrestres, perdeu a capacidade de voar. A chegada dos seres humanos e de animais introduzidos na ilha contribuiu para seu desaparecimento."
+            "O dodô vivia na ilha Maurício, no oceano Índico. " +
+            "Como não enfrentava grandes predadores terrestres, " +
+            "evoluiu sem a necessidade de voar. A presença humana " +
+            "e de animais introduzidos na ilha contribuiu para seu desaparecimento."
     },
+
 
     smilodon: {
+
         titulo: "Smilodon",
+
         icone: "🐯",
+
         texto:
-            "Apesar do apelido 'tigre-dentes-de-sabre', o Smilodon não era um tigre. Ele fazia parte de um grupo diferente de felinos e possuía caninos muito grandes. Viveu principalmente nas Américas."
+            "Apesar de ser conhecido como tigre-dentes-de-sabre, " +
+            "o Smilodon não era um tigre. Era um felino de um grupo " +
+            "diferente dos grandes felinos atuais. Seus enormes caninos " +
+            "eram uma de suas características mais marcantes."
     },
 
+
     mosassauro: {
+
         titulo: "Mosassauro",
+
         icone: "🌊",
+
         texto:
-            "Os mosassauros eram répteis marinhos gigantes que viveram durante o período Cretáceo. Alguns chegavam a vários metros de comprimento e eram predadores importantes dos antigos oceanos."
+            "Os mosassauros eram grandes répteis marinhos que viveram " +
+            "durante o período Cretáceo. Alguns alcançavam vários metros " +
+            "de comprimento e ocupavam uma posição importante entre os " +
+            "predadores dos antigos oceanos."
     }
 
 };
 
+
+/* =====================================
+   ABRIR CURIOSIDADE
+===================================== */
 
 function mostrarCuriosidade(animal) {
 
@@ -70,32 +101,39 @@ function mostrarCuriosidade(animal) {
 }
 
 
+/* =====================================
+   FECHAR MODAL
+===================================== */
+
 function fecharModal() {
 
-    document.getElementById("modal")
+    document
+        .getElementById("modal")
         .classList.remove("ativo");
 
 }
 
 
-/* =========================
+/* =====================================
    FECHAR CLICANDO FORA
-========================= */
+===================================== */
 
-document.getElementById("modal").addEventListener("click", function(event) {
+document
+    .getElementById("modal")
+    .addEventListener("click", function(event) {
 
-    if (event.target === this) {
+        if (event.target === this) {
 
-        fecharModal();
+            fecharModal();
 
-    }
+        }
 
-});
+    });
 
 
-/* =========================
-   ESC FECHA O MODAL
-========================= */
+/* =====================================
+   TECLA ESC
+===================================== */
 
 document.addEventListener("keydown", function(event) {
 
@@ -104,5 +142,22 @@ document.addEventListener("keydown", function(event) {
         fecharModal();
 
     }
+
+});
+
+
+/* =====================================
+   FECHAR MENU AO CLICAR EM UM LINK
+===================================== */
+
+document.querySelectorAll(".menu a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document
+            .querySelector(".menu")
+            .classList.remove("aberto");
+
+    });
 
 });
